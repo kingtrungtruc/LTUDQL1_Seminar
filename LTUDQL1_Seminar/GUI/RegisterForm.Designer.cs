@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class Register
+    partial class RegisterForm
     {
         /// <summary>
         /// Required designer variable.
@@ -43,6 +43,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbNhapLaiMatKhau = new System.Windows.Forms.TextBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbHienMatKhau
@@ -93,7 +94,7 @@
             // 
             // btnDangKy
             // 
-            this.btnDangKy.Location = new System.Drawing.Point(143, 349);
+            this.btnDangKy.Location = new System.Drawing.Point(73, 346);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(75, 23);
             this.btnDangKy.TabIndex = 10;
@@ -174,11 +175,22 @@
             this.dtpNgaySinh.Size = new System.Drawing.Size(171, 20);
             this.dtpNgaySinh.TabIndex = 25;
             // 
-            // Register
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(187, 346);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(75, 23);
+            this.btnHuy.TabIndex = 26;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 391);
+            this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.dtpNgaySinh);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbNhapLaiMatKhau);
@@ -197,7 +209,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Register";
+            this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký";
             this.ResumeLayout(false);
@@ -222,5 +234,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbNhapLaiMatKhau;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
+        private System.Windows.Forms.Button btnHuy;
     }
 }

@@ -33,7 +33,7 @@ namespace GUI
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            Register rgs = new Register();
+            RegisterForm rgs = new RegisterForm();
             rgs.Show();
         }
 

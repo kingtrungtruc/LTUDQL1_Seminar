@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class Register : Form
+    public partial class RegisterForm : Form
     {
-        public Register()
+        public RegisterForm()
         {
             InitializeComponent();
         }
@@ -31,5 +31,9 @@ namespace GUI
             }
         }
 
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

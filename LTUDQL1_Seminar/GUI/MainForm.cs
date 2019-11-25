@@ -27,13 +27,22 @@ namespace GUI
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
+                       
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
             if(Login == 0)
             {
                 LoginForm lgf = new LoginForm(checkLogin);
                 lgf.Show();
-                this.Close();
             }
-            
+        }
+
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
+            RegisterForm rgtf = new RegisterForm();
+            rgtf.Show();
         }
     }
 }
