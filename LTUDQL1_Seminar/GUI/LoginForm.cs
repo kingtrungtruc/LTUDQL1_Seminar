@@ -12,11 +12,9 @@ namespace GUI
 {
     public partial class LoginForm : Form
     {
-        MainForm.SendLogin send;
-        public LoginForm(MainForm.SendLogin send)
+        public LoginForm()
         {
             InitializeComponent();
-            this.send = send;
         }
 
         private void cbHienMatKhau_CheckedChanged(object sender, EventArgs e)
@@ -39,7 +37,6 @@ namespace GUI
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            this.send();
             this.Close();
         }
     }
