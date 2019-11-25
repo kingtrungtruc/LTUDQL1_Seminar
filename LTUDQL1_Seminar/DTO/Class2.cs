@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class Class1
+    class Class2
     {
         string abc;
-        string abc1;
-        string abc123132;
     }
 }
