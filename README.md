@@ -1,1 +1,0 @@
-# LTUDQL1_Seminar
