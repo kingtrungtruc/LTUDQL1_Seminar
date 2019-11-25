@@ -16,5 +16,20 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void cbHienMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbHienMatKhau.Checked)
+            {
+                tbMatKhau.UseSystemPasswordChar = false;
+                tbNhapLaiMatKhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                tbMatKhau.UseSystemPasswordChar = true;
+                tbNhapLaiMatKhau.UseSystemPasswordChar = true;
+            }
+        }
+
     }
 }
