@@ -9,5 +9,6 @@ namespace DTO
     class Class1
     {
         string abc;
+        string abc1;
     }
 }
