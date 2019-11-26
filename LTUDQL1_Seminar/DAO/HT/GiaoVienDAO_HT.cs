@@ -133,7 +133,84 @@ namespace DAO
 
             return tempReturn = 0;
         }
-
         
+        public bool DeleteGiaoVien(string MaGV)
+        {
+            /*
+             * Xóa giáo viên trong có MaGV trong bảng giáo viên
+             * nếu MaGV tồn tại ->  xóa GV đó -> trả về true
+             * nếu MaGV không tồn tại  -> trả về false
+             */
+            var giaoViens = from giaoVien in dbGiaoVien.GiaoViens
+                            where giaoVien.MaGiaVien == MaGV
+                            select giaoVien;
+
+            if (giaoViens.Count() == 0)
+            {
+                return false;
+            }
+
+            foreach(var giaoVien in giaoViens)
+            {
+                dbGiaoVien.GiaoViens.DeleteOnSubmit(giaoVien);
+            }
+            dbGiaoVien.SubmitChanges();
+            return true;
+        }
+
+        public int UpdateGiaoVien(string MaGV,string Password,string HoTen,string DiaChi,string Email,string SDT,int MaKhoi)
+        {
+            /*
+             *  Cập nhật thông tin của giáo viên 
+             *  Nếu Email trùng -> trả về 1
+             *  Nếu SDT trùng -> trả vè 2
+             *  Nếu MaKhoi không tồn trại trong cơ sở dữ liệu  -> trả về 3
+             *  Thành công -> trả về 0
+             */
+
+            var giaoViens = from giaovien in dbGiaoVien.GiaoViens
+                            where giaovien.Email == Email && giaovien.MaGiaVien != MaGV
+                            select giaovien;
+            if(giaoViens.Count() != 0)
+            {
+                return 1;
+            }
+
+
+            giaoViens = from giaovien in dbGiaoVien.GiaoViens
+                        where giaovien.SDT == SDT && giaovien.MaGiaVien != MaGV
+                        select giaovien;
+            if(giaoViens.Count() != 0)
+            {
+                return 2;
+            }
+
+
+            var maKhois = from makhoi in dbGiaoVien.Khois
+                          where makhoi.MaKhoi == MaKhoi
+                          select makhoi;
+            if(maKhois.Count() == 0)
+            {
+                return 3;
+            }
+
+            var giaoVien = from giaovien in dbGiaoVien.GiaoViens
+                           where giaovien.MaGiaVien == MaGV
+                           select giaovien;
+
+            foreach(var giaovien in giaoVien)
+            {
+                giaovien.HoTen = HoTen;
+                giaovien.DiaChi = DiaChi;
+                giaovien.Email = Email;
+                giaovien.MaKhoi = MaKhoi;
+                giaovien.Password = Password;
+                giaovien.SDT = SDT;
+            }
+            dbGiaoVien.SubmitChanges();
+            return 0;
+        }
+
+
     }
 }
