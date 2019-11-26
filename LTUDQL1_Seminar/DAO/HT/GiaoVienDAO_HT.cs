@@ -27,7 +27,7 @@ namespace DAO
                                 where giaovien.Email == Email && giaovien.Password == Password
                                 select giaovien).Count();
             var giaoVien = from giaovien in dbGiaoVien.GiaoViens
-                           where giaovien.MaGiaVien == Email && giaovien.Password == Password
+                           where giaovien.Email  == Email && giaovien.Password == Password
                            select giaovien;
             
             if (countgiaoVien == 0) // nếu giáo viên = 0 thì có nghĩ giáo viên này không tồn tại

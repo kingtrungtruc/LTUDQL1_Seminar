@@ -42,16 +42,19 @@ namespace GUI
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             GiaoVien giaoVienDangNhap = new GiaoVien();
-            DAO.GiaoVienDAO_HT giaoVien = new DAO.GiaoVienDAO_HT();
+            BUS.HT.GiaoVienBUS giaoVien = new BUS.HT.GiaoVienBUS();
             giaoVienDangNhap = giaoVien.FindGiaoVien(tbEmail.Text, tbMatKhau.Text);
             if(giaoVienDangNhap != null)
             {
                 this.Hide();
-                GiaoVienGUI giaoVienGUI = new GiaoVienGUI(giaoVienDangNhap, this);
+                GiaoVienGUI giaoVienGUI = new GiaoVienGUI(giaoVienDangNhap);
                 giaoVienGUI.ShowDialog();
                 this.Close();
             }
-            
+            if(giaoVienDangNhap == null)
+            {
+                MessageBox.Show("Không trùng Email hoặc Password", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
