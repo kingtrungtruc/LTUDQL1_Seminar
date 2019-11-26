@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GiaoVienGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVienGUI.Designer.cs">
+      <DependentUpon>GiaoVienGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="KetQuaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GiaoVienGUI.resx">
+      <DependentUpon>GiaoVienGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +116,10 @@
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{1b3cd2f6-9905-4fc3-a550-942d1f0f432e}</Project>
       <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{eb87dc49-3ffc-4550-a494-e22736697969}</Project>
+      <Name>DAO</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{512f155e-d3aa-4099-b658-7d3425e1357b}</Project>

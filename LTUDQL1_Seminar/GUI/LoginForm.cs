@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DAO.HT;
 namespace GUI
 {
     public partial class LoginForm : Form
@@ -34,10 +34,24 @@ namespace GUI
             RegisterForm rgs = new RegisterForm();
             rgs.Show();
         }
-
-        private void btnDangNhap_Click(object sender, EventArgs e)
+        public void CloseForm()
         {
             this.Close();
+        }
+        public delegate void send(); 
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            GiaoVien giaoVienDangNhap = new GiaoVien();
+            DAO.GiaoVienDAO_HT giaoVien = new DAO.GiaoVienDAO_HT();
+            giaoVienDangNhap = giaoVien.FindGiaoVien(tbEmail.Text, tbMatKhau.Text);
+            if(giaoVienDangNhap != null)
+            {
+                this.Hide();
+                GiaoVienGUI giaoVienGUI = new GiaoVienGUI(giaoVienDangNhap, this);
+                giaoVienGUI.ShowDialog();
+                this.Close();
+            }
+            
         }
     }
 }

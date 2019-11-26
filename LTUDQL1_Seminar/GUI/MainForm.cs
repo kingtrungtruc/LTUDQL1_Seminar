@@ -27,5 +27,10 @@ namespace GUI
             RegisterForm rgtf = new RegisterForm();
             rgtf.Show();
         }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

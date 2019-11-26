@@ -8,12 +8,12 @@ using DAO.HT;
 namespace DAO
 {
 
-    class GiaoVienDAO_HT
+    public class GiaoVienDAO_HT
     {
         GiaoVienDataContext dbGiaoVien = new GiaoVienDataContext();
         
         
-        public GiaoVien FindGiaoVien(string MaGV,string Password) 
+        public GiaoVien FindGiaoVien(string Email,string Password) 
         {
             /*
              * Tìm giáo viên trong cơ sở dữ liệu ? 
@@ -24,10 +24,10 @@ namespace DAO
 
             GiaoVien tempGiaoVien = new GiaoVien();
             int countgiaoVien = (from giaovien in dbGiaoVien.GiaoViens
-                                where giaovien.MaGiaVien == MaGV && giaovien.Password == Password
+                                where giaovien.Email == Email && giaovien.Password == Password
                                 select giaovien).Count();
             var giaoVien = from giaovien in dbGiaoVien.GiaoViens
-                           where giaovien.MaGiaVien == MaGV && giaovien.Password == Password
+                           where giaovien.MaGiaVien == Email && giaovien.Password == Password
                            select giaovien;
             
             if (countgiaoVien == 0) // nếu giáo viên = 0 thì có nghĩ giáo viên này không tồn tại
