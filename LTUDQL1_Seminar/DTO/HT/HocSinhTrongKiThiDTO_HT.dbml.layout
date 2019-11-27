@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="HocSinhTrongKiThiDTO_HT">
+  <DataContextMoniker Name="/HocSinhTrongKiThiDTO_HTDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3892bdd4-2160-4cf5-84dc-b5bff7bc3570" absoluteBounds="1.375, 1.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HocSinhTrongKiThiDTO_HTDataContext/HocSinhTrongKiThi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1f64c8d-1822-406a-9b36-2ca7ffd5fc9c" absoluteBounds="1.3900000000000001, 2.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

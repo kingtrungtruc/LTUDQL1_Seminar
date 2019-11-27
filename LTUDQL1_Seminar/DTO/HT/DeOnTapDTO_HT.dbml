@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CSDL" Class="DeOnTapDTO_HTDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\CSDL.mdf;Integrated Security=True" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="CSDLConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DeOnTap" Member="DeOnTaps">
+    <Type Name="DeOnTap">
+      <Column Name="MaHocSinh" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaDe" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaKhoi" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NgayGioiHan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Diem" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
