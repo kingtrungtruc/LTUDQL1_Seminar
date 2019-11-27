@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CSDL" Class="KhoiDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\Desktop\LTQLUD\DOANCUOIKI\LTUDQL1_Seminar\LTUDQL1_Seminar\DTO\CSDL.mdf;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="CSDLConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Khoi" Member="Khois">
+    <Type Name="Khoi">
+      <Column Name="MaKhoi" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenKhoi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

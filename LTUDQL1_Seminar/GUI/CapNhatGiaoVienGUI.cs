@@ -31,6 +31,7 @@ namespace GUI
             txtPasswordGiaoVien.PasswordChar = '*';
             txtPasswordGiaoVien.Text = giaovien.Password;
             txtSDTGiaoVien.Text = giaovien.SDT;
+            
         }
 
         private void CapNhatGiaoVienGUI_Load(object sender, EventArgs e)

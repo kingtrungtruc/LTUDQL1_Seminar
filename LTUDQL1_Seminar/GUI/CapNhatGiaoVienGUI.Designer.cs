@@ -42,7 +42,7 @@
             this.txtSDTGiaoVien = new System.Windows.Forms.TextBox();
             this.txtPasswordGiaoVien = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbMaKhoi = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -165,13 +165,13 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "Mã khối :";
             // 
-            // comboBox1
+            // cbMaKhoi
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(86, 339);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(190, 21);
-            this.comboBox1.TabIndex = 14;
+            this.cbMaKhoi.FormattingEnabled = true;
+            this.cbMaKhoi.Location = new System.Drawing.Point(86, 339);
+            this.cbMaKhoi.Name = "cbMaKhoi";
+            this.cbMaKhoi.Size = new System.Drawing.Size(190, 21);
+            this.cbMaKhoi.TabIndex = 14;
             // 
             // button1
             // 
@@ -188,7 +188,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(385, 510);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbMaKhoi);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtPasswordGiaoVien);
             this.Controls.Add(this.txtSDTGiaoVien);
@@ -227,7 +227,7 @@
         private System.Windows.Forms.TextBox txtSDTGiaoVien;
         private System.Windows.Forms.TextBox txtPasswordGiaoVien;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbMaKhoi;
         private System.Windows.Forms.Button button1;
     }
 }

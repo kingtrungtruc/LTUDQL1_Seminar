@@ -47,6 +47,12 @@
       <DependentUpon>GiaoVien.dbml</DependentUpon>
     </Compile>
     <Compile Include="HT\GiaoVienDAO_HT.cs" />
+    <Compile Include="HT\Khoi.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Khoi.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="HT\KhoiDAO_HT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -69,6 +75,14 @@
     </None>
     <None Include="HT\GiaoVien.dbml.layout">
       <DependentUpon>GiaoVien.dbml</DependentUpon>
+    </None>
+    <None Include="HT\Khoi.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Khoi.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HT\Khoi.dbml.layout">
+      <DependentUpon>Khoi.dbml</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
