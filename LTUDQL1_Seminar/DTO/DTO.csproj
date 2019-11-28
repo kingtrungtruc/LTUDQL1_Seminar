@@ -57,66 +57,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CauHoiDTO.cs" />
-    <Compile Include="HT\CauHoiDTO_HT.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CauHoiDTO_HT.dbml</DependentUpon>
-    </Compile>
     <Compile Include="CauHoiTrongDeNaoDTO.cs" />
     <Compile Include="DeDTO.cs" />
     <Compile Include="DeOnTapDTO.cs" />
     <Compile Include="GiaoVienDTO.cs" />
-    <Compile Include="HT\CauHoiTrongDeNaoDTO_HT.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CauHoiTrongDeNaoDTO_HT.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="HT\DeDTO_HT.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DeDTO_HT.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="HT\DeOnTapDTO_HT.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DeOnTapDTO_HT.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="HT\GiaoVienDTO_HT.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GiaoVienDTO_HT.dbml</DependentUpon>
-    </Compile>
     <Compile Include="HocSinhDTO.cs" />
     <Compile Include="HocSinhTrongKiThiDTO.cs" />
-    <Compile Include="HT\HocSinhDTO_HT.designer.cs">
+    <Compile Include="HT\DataContext.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HocSinhDTO_HT.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="HT\HocSinhTrongKiThiDTO_HT.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HocSinhTrongKiThiDTO_HT.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="HT\KhoiDTO_HT.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KhoiDTO_HT.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="HT\KiThiDTO_HT.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KiThiDTO_HT.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="HT\LopDTO_HT.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LopDTO_HT.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="HT\MaDeVaKhoiTrongKiThiDTO_HT.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MaDeVaKhoiTrongKiThiDTO_HT.dbml</DependentUpon>
+      <DependentUpon>DataContext.dbml</DependentUpon>
     </Compile>
     <Compile Include="KhoiDTO.cs" />
     <Compile Include="KiThiDTO.cs" />
@@ -142,103 +92,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CSDL.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="CSDL_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>CSDL.mdf</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="HT\CauHoiDTO_HT.dbml">
+    <None Include="HT\DataContext.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>CauHoiDTO_HT.designer.cs</LastGenOutput>
+      <LastGenOutput>DataContext.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="HT\CauHoiDTO_HT.dbml.layout">
-      <DependentUpon>CauHoiDTO_HT.dbml</DependentUpon>
-    </None>
-    <None Include="HT\CauHoiTrongDeNaoDTO_HT.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>CauHoiTrongDeNaoDTO_HT.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HT\CauHoiTrongDeNaoDTO_HT.dbml.layout">
-      <DependentUpon>CauHoiTrongDeNaoDTO_HT.dbml</DependentUpon>
-    </None>
-    <None Include="HT\DeDTO_HT.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DeDTO_HT.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HT\DeDTO_HT.dbml.layout">
-      <DependentUpon>DeDTO_HT.dbml</DependentUpon>
-    </None>
-    <None Include="HT\DeOnTapDTO_HT.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DeOnTapDTO_HT.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HT\DeOnTapDTO_HT.dbml.layout">
-      <DependentUpon>DeOnTapDTO_HT.dbml</DependentUpon>
-    </None>
-    <None Include="HT\GiaoVienDTO_HT.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>GiaoVienDTO_HT.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HT\GiaoVienDTO_HT.dbml.layout">
-      <DependentUpon>GiaoVienDTO_HT.dbml</DependentUpon>
-    </None>
-    <None Include="HT\HocSinhDTO_HT.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>HocSinhDTO_HT.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HT\HocSinhDTO_HT.dbml.layout">
-      <DependentUpon>HocSinhDTO_HT.dbml</DependentUpon>
-    </None>
-    <None Include="HT\HocSinhTrongKiThiDTO_HT.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>HocSinhTrongKiThiDTO_HT.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HT\HocSinhTrongKiThiDTO_HT.dbml.layout">
-      <DependentUpon>HocSinhTrongKiThiDTO_HT.dbml</DependentUpon>
-    </None>
-    <None Include="HT\KhoiDTO_HT.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>KhoiDTO_HT.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HT\KhoiDTO_HT.dbml.layout">
-      <DependentUpon>KhoiDTO_HT.dbml</DependentUpon>
-    </None>
-    <None Include="HT\KiThiDTO_HT.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>KiThiDTO_HT.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HT\KiThiDTO_HT.dbml.layout">
-      <DependentUpon>KiThiDTO_HT.dbml</DependentUpon>
-    </None>
-    <None Include="HT\LopDTO_HT.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>LopDTO_HT.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HT\LopDTO_HT.dbml.layout">
-      <DependentUpon>LopDTO_HT.dbml</DependentUpon>
-    </None>
-    <None Include="HT\MaDeVaKhoiTrongKiThiDTO_HT.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>MaDeVaKhoiTrongKiThiDTO_HT.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HT\MaDeVaKhoiTrongKiThiDTO_HT.dbml.layout">
-      <DependentUpon>MaDeVaKhoiTrongKiThiDTO_HT.dbml</DependentUpon>
+    <None Include="HT\DataContext.dbml.layout">
+      <DependentUpon>DataContext.dbml</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -248,7 +108,15 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="CSDL.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CSDL_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>CSDL.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
