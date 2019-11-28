@@ -1,4 +1,4 @@
-﻿using DAO.HS;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +13,7 @@ namespace GUI
 {
     public partial class HocSinhGUI : Form
     {
-        public HocSinhGUI(HocSinh hocSinh, LoginForm login)
+        public HocSinhGUI()
         {
             InitializeComponent();
         }
