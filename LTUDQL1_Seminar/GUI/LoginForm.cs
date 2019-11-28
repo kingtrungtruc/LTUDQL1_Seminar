@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAO.HT;
+using DAO.HS;
+using System.Data.SqlClient;
+
 namespace GUI
 {
     public partial class LoginForm : Form
@@ -43,13 +46,44 @@ namespace GUI
         {
             GiaoVien giaoVienDangNhap = new GiaoVien();
             DAO.GiaoVienDAO_HT giaoVien = new DAO.GiaoVienDAO_HT();
-            giaoVienDangNhap = giaoVien.FindGiaoVien(tbEmail.Text, tbMatKhau.Text);
-            if(giaoVienDangNhap != null)
+            try
+            {
+                giaoVienDangNhap = giaoVien.FindGiaoVien(tbEmail.Text, tbMatKhau.Text);
+            }
+            catch(SqlException SqlEx)
+            {
+                MessageBox.Show(SqlEx.Message);
+            }
+           
+            if(giaoVienDangNhap.DiaChi != null)
             {
                 this.Hide();
                 GiaoVienGUI giaoVienGUI = new GiaoVienGUI(giaoVienDangNhap, this);
                 giaoVienGUI.ShowDialog();
                 this.Close();
+            }
+            else
+            {
+                /*HS đăng nhập*/
+                HocSinh HSLogin = new HocSinh();
+                DAO.HocSinhDAO_HS hs = new DAO.HocSinhDAO_HS();
+
+                try
+                {
+                    HSLogin = hs.FindOneHocSinh(tbEmail.Text, tbMatKhau.Text);
+                }
+                catch(SqlException SqlEx)
+                {
+                    MessageBox.Show(SqlEx.Message, "Lỗi truy vấn!");
+                }
+                
+                if(HSLogin != null)
+                {
+                    this.Hide();
+                    HocSinhGUI hocSinhGUI = new HocSinhGUI(HSLogin, this);
+                    hocSinhGUI.ShowDialog();
+                    this.Close();
+                }
             }
             
         }

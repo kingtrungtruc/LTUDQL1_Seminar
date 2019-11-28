@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="HocSinh">
+  <DataContextMoniker Name="/HocSinhDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b6bb17ec-7c0d-47a0-968e-3875dbe976f0" absoluteBounds="1.875, 1.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/HocSinhDataContext/HocSinh" />
+      <nestedChildShapes>
+        <elementListCompartment Id="65059d00-938a-4060-90f2-9713d173b414" absoluteBounds="1.8900000000000001, 2.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0563f354-f2bb-4dee-b36f-648f6e2bebdf" absoluteBounds="6.375, 4.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HocSinhDataContext/Lop" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7a94fc7e-bbc9-4185-b973-08a35b2fd8b5" absoluteBounds="6.39, 5.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.375 : 4.75); (7.375 : 2.85659912109375); (3.875 : 2.85659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HocSinhDataContext/Lop/Lop_HocSinh" />
+      <nodes>
+        <classShapeMoniker Id="0563f354-f2bb-4dee-b36f-648f6e2bebdf" />
+        <classShapeMoniker Id="b6bb17ec-7c0d-47a0-968e-3875dbe976f0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="680c3d9d-5bb8-417d-bffb-64ce61ec6d27" absoluteBounds="1.625, 5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/HocSinhDataContext/Khoi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a14f7bd4-b407-44bf-affe-f58c65c5fc61" absoluteBounds="1.6400000000000001, 5.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.625 : 5.56814697265625); (6.375 : 5.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HocSinhDataContext/Khoi/Khoi_Lop" />
+      <nodes>
+        <classShapeMoniker Id="680c3d9d-5bb8-417d-bffb-64ce61ec6d27" />
+        <classShapeMoniker Id="0563f354-f2bb-4dee-b36f-648f6e2bebdf" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

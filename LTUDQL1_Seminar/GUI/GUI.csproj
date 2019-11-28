@@ -52,6 +52,12 @@
     <Compile Include="GiaoVienGUI.Designer.cs">
       <DependentUpon>GiaoVienGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="HocSinhGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HocSinhGUI.Designer.cs">
+      <DependentUpon>HocSinhGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="KetQuaForm.cs">
       <SubType>Form</SubType>
     </Compile>

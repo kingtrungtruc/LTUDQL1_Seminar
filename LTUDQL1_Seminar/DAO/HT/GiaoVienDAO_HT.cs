@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAO.HT;
+using System.Data.SqlClient;
 
 namespace DAO
 {
@@ -23,9 +24,18 @@ namespace DAO
 
 
             GiaoVien tempGiaoVien = new GiaoVien();
-            int countgiaoVien = (from giaovien in dbGiaoVien.GiaoViens
-                                where giaovien.Email == Email && giaovien.Password == Password
-                                select giaovien).Count();
+            int countgiaoVien = 0;
+            try
+            {
+                countgiaoVien = (from giaovien in dbGiaoVien.GiaoViens
+                                     where giaovien.Email == Email && giaovien.Password == Password
+                                     select giaovien).Count();
+            }
+            catch(SqlException SqlEx)
+            {
+                throw SqlEx;
+            }
+            
             var giaoVien = from giaovien in dbGiaoVien.GiaoViens
                            where giaovien.MaGiaVien == Email && giaovien.Password == Password
                            select giaovien;
