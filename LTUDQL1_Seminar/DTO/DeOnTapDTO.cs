@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class DeOnTapDTO
+    public class DeOnTapDTO
     {
         private string _maHocSinh;
         public string MaHocSinh

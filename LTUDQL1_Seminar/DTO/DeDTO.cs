@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class DeDTO
+    public class DeDTO
     {
         private string _maDe;
         public string MaDe

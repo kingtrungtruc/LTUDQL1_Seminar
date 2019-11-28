@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class LopDTO
+    public class LopDTO
     {
         private string _maLop;
         public string MaLop

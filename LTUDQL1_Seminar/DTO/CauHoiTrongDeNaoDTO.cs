@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class CauHoiTrongDeNaoDTO
+    public class CauHoiTrongDeNaoDTO
     {
         private int _maCauHoi;
         public int MaCauHoi

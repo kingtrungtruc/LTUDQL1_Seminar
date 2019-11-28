@@ -45,6 +45,7 @@ namespace GUI
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             GiaoVien giaoVienDangNhap = new GiaoVien();
+<<<<<<< HEAD
             DAO.GiaoVienDAO_HT giaoVien = new DAO.GiaoVienDAO_HT();
             try
             {
@@ -56,12 +57,18 @@ namespace GUI
             }
            
             if(giaoVienDangNhap.DiaChi != null)
+=======
+            BUS.HT.GiaoVienBUS giaoVien = new BUS.HT.GiaoVienBUS();
+            giaoVienDangNhap = giaoVien.FindGiaoVien(tbEmail.Text, tbMatKhau.Text);
+            if(giaoVienDangNhap != null)
+>>>>>>> 2bc2634bffcb255b99f00eb9e2042b2a8db80d09
             {
                 this.Hide();
-                GiaoVienGUI giaoVienGUI = new GiaoVienGUI(giaoVienDangNhap, this);
+                GiaoVienGUI giaoVienGUI = new GiaoVienGUI(giaoVienDangNhap);
                 giaoVienGUI.ShowDialog();
                 this.Close();
             }
+<<<<<<< HEAD
             else
             {
                 /*HS đăng nhập*/
@@ -86,6 +93,12 @@ namespace GUI
                 }
             }
             
+=======
+            if(giaoVienDangNhap == null)
+            {
+                MessageBox.Show("Không trùng Email hoặc Password", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+>>>>>>> 2bc2634bffcb255b99f00eb9e2042b2a8db80d09
         }
     }
 }

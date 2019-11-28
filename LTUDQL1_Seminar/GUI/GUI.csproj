@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapNhatGiaoVienGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatGiaoVienGUI.Designer.cs">
+      <DependentUpon>CapNhatGiaoVienGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GiaoVienGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CapNhatGiaoVienGUI.resx">
+      <DependentUpon>CapNhatGiaoVienGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GiaoVienGUI.resx">
       <DependentUpon>GiaoVienGUI.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CSDL" Class="MaDeVaKhoiTrongKiThiDTO_HTDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\CSDL.mdf;Integrated Security=True" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="CSDLConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.MaDeVaKhoiTrongKiThi" Member="MaDeVaKhoiTrongKiThis">
+    <Type Name="MaDeVaKhoiTrongKiThi">
+      <Column Name="MaKiThi" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="MaDe" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="MaKhoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaDeVaKhoiTrongKiThi" Member="MaDeVaKhoiTrongKiThi1" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

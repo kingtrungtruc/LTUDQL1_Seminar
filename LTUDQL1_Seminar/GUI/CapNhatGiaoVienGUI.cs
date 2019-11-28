@@ -12,22 +12,27 @@ using DTO;
 
 namespace GUI
 {
-    public partial class GiaoVienGUI : Form
+    public partial class CapNhatGiaoVienGUI : Form
     {
-        public GiaoVienGUI()
+        public CapNhatGiaoVienGUI()
         {
             InitializeComponent();
             
         }
 
-        private void GiaoVienGUI_Load(object sender, EventArgs e)
+        void LoadGiaoVien()
         {
+            
         }
 
-        private void btnUpdateGiaoVien_Click(object sender, EventArgs e)
+        private void CapNhatGiaoVienGUI_Load(object sender, EventArgs e)
         {
-            CapNhatGiaoVienGUI capNhatGiaoVien = new CapNhatGiaoVienGUI();
-            capNhatGiaoVien.ShowDialog();
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

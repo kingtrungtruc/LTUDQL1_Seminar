@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAO.HT
+namespace DTO.HT
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -23,7 +23,7 @@ namespace DAO.HT
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="CSDL")]
-	public partial class GiaoVienDataContext : System.Data.Linq.DataContext
+	public partial class GiaoVienDTO_HTDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -33,36 +33,33 @@ namespace DAO.HT
     partial void InsertGiaoVien(GiaoVien instance);
     partial void UpdateGiaoVien(GiaoVien instance);
     partial void DeleteGiaoVien(GiaoVien instance);
-    partial void InsertKhoi(Khoi instance);
-    partial void UpdateKhoi(Khoi instance);
-    partial void DeleteKhoi(Khoi instance);
     #endregion
 		
-		public GiaoVienDataContext() : 
-				base(global::DAO.Properties.Settings.Default.CSDLConnectionString, mappingSource)
+		public GiaoVienDTO_HTDataContext() : 
+				base(global::DTO.Properties.Settings.Default.CSDLConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public GiaoVienDataContext(string connection) : 
+		public GiaoVienDTO_HTDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public GiaoVienDataContext(System.Data.IDbConnection connection) : 
+		public GiaoVienDTO_HTDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public GiaoVienDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public GiaoVienDTO_HTDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public GiaoVienDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public GiaoVienDTO_HTDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
@@ -73,14 +70,6 @@ namespace DAO.HT
 			get
 			{
 				return this.GetTable<GiaoVien>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Khoi> Khois
-		{
-			get
-			{
-				return this.GetTable<Khoi>();
 			}
 		}
 	}
@@ -105,8 +94,6 @@ namespace DAO.HT
 		
 		private System.Nullable<int> _MaKhoi;
 		
-		private EntityRef<Khoi> _Khoi;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -129,7 +116,6 @@ namespace DAO.HT
 		
 		public GiaoVien()
 		{
-			this._Khoi = default(EntityRef<Khoi>);
 			OnCreated();
 		}
 		
@@ -264,49 +250,11 @@ namespace DAO.HT
 			{
 				if ((this._MaKhoi != value))
 				{
-					if (this._Khoi.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnMaKhoiChanging(value);
 					this.SendPropertyChanging();
 					this._MaKhoi = value;
 					this.SendPropertyChanged("MaKhoi");
 					this.OnMaKhoiChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Khoi_GiaoVien", Storage="_Khoi", ThisKey="MaKhoi", OtherKey="MaKhoi", IsForeignKey=true)]
-		public Khoi Khoi
-		{
-			get
-			{
-				return this._Khoi.Entity;
-			}
-			set
-			{
-				Khoi previousValue = this._Khoi.Entity;
-				if (((previousValue != value) 
-							|| (this._Khoi.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Khoi.Entity = null;
-						previousValue.GiaoViens.Remove(this);
-					}
-					this._Khoi.Entity = value;
-					if ((value != null))
-					{
-						value.GiaoViens.Add(this);
-						this._MaKhoi = value.MaKhoi;
-					}
-					else
-					{
-						this._MaKhoi = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Khoi");
 				}
 			}
 		}
@@ -329,120 +277,6 @@ namespace DAO.HT
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Khoi")]
-	public partial class Khoi : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _MaKhoi;
-		
-		private string _TenKhoi;
-		
-		private EntitySet<GiaoVien> _GiaoViens;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaKhoiChanging(int value);
-    partial void OnMaKhoiChanged();
-    partial void OnTenKhoiChanging(string value);
-    partial void OnTenKhoiChanged();
-    #endregion
-		
-		public Khoi()
-		{
-			this._GiaoViens = new EntitySet<GiaoVien>(new Action<GiaoVien>(this.attach_GiaoViens), new Action<GiaoVien>(this.detach_GiaoViens));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKhoi", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int MaKhoi
-		{
-			get
-			{
-				return this._MaKhoi;
-			}
-			set
-			{
-				if ((this._MaKhoi != value))
-				{
-					this.OnMaKhoiChanging(value);
-					this.SendPropertyChanging();
-					this._MaKhoi = value;
-					this.SendPropertyChanged("MaKhoi");
-					this.OnMaKhoiChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenKhoi", DbType="NVarChar(50)")]
-		public string TenKhoi
-		{
-			get
-			{
-				return this._TenKhoi;
-			}
-			set
-			{
-				if ((this._TenKhoi != value))
-				{
-					this.OnTenKhoiChanging(value);
-					this.SendPropertyChanging();
-					this._TenKhoi = value;
-					this.SendPropertyChanged("TenKhoi");
-					this.OnTenKhoiChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Khoi_GiaoVien", Storage="_GiaoViens", ThisKey="MaKhoi", OtherKey="MaKhoi")]
-		public EntitySet<GiaoVien> GiaoViens
-		{
-			get
-			{
-				return this._GiaoViens;
-			}
-			set
-			{
-				this._GiaoViens.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_GiaoViens(GiaoVien entity)
-		{
-			this.SendPropertyChanging();
-			entity.Khoi = this;
-		}
-		
-		private void detach_GiaoViens(GiaoVien entity)
-		{
-			this.SendPropertyChanging();
-			entity.Khoi = null;
 		}
 	}
 }

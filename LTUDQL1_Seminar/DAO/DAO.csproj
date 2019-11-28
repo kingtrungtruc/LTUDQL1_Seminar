@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="HS\HocSinh.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -53,6 +54,8 @@
       <DependentUpon>GiaoVien.dbml</DependentUpon>
     </Compile>
     <Compile Include="HT\GiaoVienDAO_HT.cs" />
+=======
+>>>>>>> 2bc2634bffcb255b99f00eb9e2042b2a8db80d09
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -67,6 +70,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="app.config" />
     <None Include="HS\HocSinh.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -81,6 +85,8 @@
     <None Include="HT\GiaoVien.dbml.layout">
       <DependentUpon>GiaoVien.dbml</DependentUpon>
     </None>
+=======
+>>>>>>> 2bc2634bffcb255b99f00eb9e2042b2a8db80d09
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -90,9 +96,13 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="HS\HocSinh.dbml.layout">
       <DependentUpon>HocSinh.dbml</DependentUpon>
     </None>
+=======
+    <Folder Include="HT\" />
+>>>>>>> 2bc2634bffcb255b99f00eb9e2042b2a8db80d09
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
